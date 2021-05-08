@@ -1,0 +1,66 @@
+/* *
+{
+    border: 1px solid red;
+} */
+
+html{
+    background: url("../images/good-morning-camino.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
+}
+
+h2 {
+    text-align: center;
+}
+
+body{
+    background-color: white;
+    left: 25%;
+    margin: 0;
+    padding: 20px 20px 20px 20px;
+    position: absolute;
+    top: 25%;
+    transform: translate(-25%, -25%);
+    -ms-transform: translate(-25%, -25%);
+}
+
+#left{
+    align-items: center;
+    margin: 10px;
+    width: 45%;
+    float: left;
+}
+
+#right{
+    align-items: center;
+    margin: 10px;
+    width: 45%;
+    float: right;
+}
+
+#headshot {
+    align-items: center;
+    border: 5px solid darkgray;
+    border-radius: 50%;
+    display: block;
+    float: left;
+    margin: 20px;
+    padding: 10px;
+    width: 250px;
+}
+
+.no-float {
+    clear: both;
+}
+
+.aligncenter {
+    text-align: center;
+}
+
+#socials {
+    clear: both;
+}
+.sociallogo{
+    width: 80px;
+}

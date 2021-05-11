@@ -27,19 +27,23 @@ body{
 
 #left{
     align-items: center;
-    margin: 10px;
+    margin: 5px;
     width: 45%;
     float: left;
 }
 
+#porky-pig{
+    height: 124px;
+}
+
 #right{
     align-items: center;
-    margin: 10px;
+    margin: 5px;
     width: 45%;
     float: right;
 }
 
-#headshot {
+.headshot {
     align-items: center;
     border: 5px solid darkgray;
     border-radius: 50%;
@@ -47,11 +51,23 @@ body{
     float: left;
     margin: 20px;
     padding: 10px;
-    width: 250px;
+    width: 125px;
+}
+
+.headshot-right {
+    align-items: center;
+    border: 5px solid darkgray;
+    border-radius: 50%;
+    display: block;
+    float: right;
+    margin: 20px;
+    padding: 10px;
+    width: 125px;
 }
 
 .no-float {
     clear: both;
+    overflow: auto;
 }
 
 .aligncenter {
@@ -61,6 +77,12 @@ body{
 #socials {
     clear: both;
 }
+
 .sociallogo{
     width: 80px;
 }
+
+/* .panel{
+    border:1px solid darkgray;
+    padding: 20px;
+} */

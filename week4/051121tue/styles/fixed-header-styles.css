@@ -1,0 +1,40 @@
+/* * {
+    border: 1px solid black;
+} */
+
+#my-header{
+    /* setting up the content */
+    text-align: center;
+    background-color: crimson;
+    font-weight: bolder;
+    padding: 20px; 
+    font-size: larger;
+
+    /* locking it in place */
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+.my-content{
+    margin-top: 65px;
+}
+
+.zeroth
+{
+    background-color: yellow;
+    margin: 1px;
+}
+
+/* .even
+{
+    background-color: lightgray;
+    margin: 1px;
+}
+
+.odd
+{
+    background-color: grey;
+    margin: 1px;
+} */

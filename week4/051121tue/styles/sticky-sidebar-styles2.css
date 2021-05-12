@@ -1,0 +1,23 @@
+/* * {
+    border: 1px solid red;
+} */
+
+#my-nav{
+    position: fixed;
+    top: 0px;
+    height: 100%;
+    background-color: #FAFCC2;
+    /* opacity: 40%; */
+}
+
+ul{
+    padding-left: 25px;
+    padding-right: 20px;
+}
+
+.my-content{
+    background-color: #CCF6C8;
+    padding-left: 110px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+}

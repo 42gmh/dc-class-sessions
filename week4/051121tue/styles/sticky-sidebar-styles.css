@@ -1,0 +1,33 @@
+ /* * {
+    border: 1px solid red;
+} */
+
+.my-container{
+    /* need an anchoring root container with non-static 
+    positioning for the absolute and sticky to work. */
+    position: relative;
+}
+
+.my-sidebar{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 35px;
+    background-color: aquamarine;
+    /* opacity: 40%; */
+}
+
+#my-nav{
+    position: sticky;
+    top: 10%;
+}
+
+ul{
+    padding-left: 25px;
+    padding-right: 20px;
+}
+
+.my-content{
+    margin-left: 100px;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Centered Button -- Flexbox</title>
+        <style>
+            /* *{
+                border: 1px solid red;
+            } */
+
+            .my-outer-container{
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .my-container{
+                display: flex;
+                height: 500px;
+                width: 500px;
+                background-color: aquamarine;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .my-button{
+                background-color: azure;
+                height: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="my-outer-container">
+            <div class="my-container">
+                <button class="my-button">My Button</button>
+            </div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blog Grid</title>
+        <style>
+
+            #my-footer{
+                text-align: center;
+            }
+
+            #nav-bar{
+                list-style-type: none;
+            }
+
+            #nav-bar > li {
+                float: left;
+                padding: 20px;
+            }
+
+            #my-blog-container{
+                display: grid;
+                max-width: 800px;
+            }
+
+
+            #my-header{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                grid-column-start: 1;
+                grid-column-end: 4;
+                background-color: lightpink;
+            }
+
+            #main-content{
+                grid-column-start: 1;
+                grid-column-end: 3;
+            }
+
+            #my-footer{
+                grid-column-start: 1;
+                grid-column-end: 4;
+                background-color: lightpink;
+            }
+
+            #my-title{
+                padding-left: 10px;
+                margin-left: 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="my-blog-container">
+            <div id="my-header">
+                <h1 id="my-title">ACME Inc.</h1>
+                <ul id="nav-bar">
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Blog</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div id="main-content">
+                <h2>Article Title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque blandit pellentesque augue nec porttitor. Quisque nec nulla nec justo lobortis cursus. Nullam ullamcorper erat id rhoncus commodo. Pellentesque vitae erat eros. Nullam commodo a metus at maximus. Sed ut massa turpis. Sed a elementum metus. Donec ullamcorper vehicula condimentum. Vivamus euismod id ipsum id commodo. In placerat efficitur mi sed fringilla. Ut sed purus in lacus dignissim sollicitudin sed vel ipsum. Donec et magna ut nulla vehicula cursus. Aenean fringilla nec justo et consectetur. Nulla facilisis scelerisque ligula et semper.</p>
+           </div>
+            <aside>
+                <h3>Extra Links</h3>
+                <ul>
+                    <li>Official Docs</li>
+                    <li>Privacy Policy</li>
+                    <li>Terms of Service</li>
+                </ul>
+            </aside>
+            <footer id="my-footer">
+                &#169; Acme Inc. All Rights Reserved
+            </footer>
+        </div>
+    </body>
+</html>

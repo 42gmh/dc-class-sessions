@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>3 Col Layout</title>
+        <style>
+            *{
+                /* border: 1px solid black; */
+                margin: 0px;
+            }
+
+            #div1{
+                background-color: lightcoral;
+            }
+
+            #div2{
+                background-color: lightyellow;
+            }
+
+            #div3{
+                background-color: lightblue;
+            }
+
+            #div1, #div2, #div3{
+                flex-grow: 1;
+                display: flex;
+                align-content: center;
+                align-items: center;
+                justify-content: center;
+                font-size: x-large;
+                font-weight: bolder;
+            }
+
+            .my-container{
+                height: 100vh;
+                width: 100vw;
+                display: flex;
+                align-items: stretch;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="my-container">
+            <div class="inner-div" id="div1">1</div>
+            <div class="inner-div" id="div2">2</div>
+            <div class="inner-div" id="div3">3</div>
+        </div>
+    </body>
+</html>

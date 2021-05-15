@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tic Tac Toe</title>
+        <style>
+            *{
+                /* border: 1px solid cornflowerblue;  */
+                margin: 0px;
+            }
+
+            .my-cells{
+                height: 50px;
+                width: 50px;
+                border: 1px solid black;
+            }
+
+            .dark-cell{
+                background-color: black;
+            }
+
+            .my-board{
+                display: grid;
+                grid-template-columns: repeat(3, 50px);
+            }
+
+            .my-outer-container{
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+    <div class="my-outer-container">
+        <div class="my-board">
+            <div class="my-cells light-cell" id="my-cell-1"></div>
+            <div class="my-cells dark-cell" id="my-cell-2"></div>
+            <div class="my-cells light-cell" id="my-cell-3"></div>
+            <div class="my-cells dark-cell" id="my-cell-4"></div>
+            <div class="my-cells light-cell" id="my-cell-5"></div>
+            <div class="my-cells dark-cell" id="my-cell-6"></div>
+            <div class="my-cells light-cell" id="my-cell-7"></div>
+            <div class="my-cells dark-cell" id="my-cell-8"></div>
+            <div class="my-cells light-cell" id="my-cell-9"></div>
+        </div>            
+    </div>
+</body>
+</html>

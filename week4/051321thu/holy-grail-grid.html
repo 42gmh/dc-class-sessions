@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Holy Grail Layout - Flex Box</title>
+    <title>Holy Grail Layout - Grid</title>
     <style>
       body {
         font-family: Sans-Serif;
@@ -30,43 +30,47 @@
 
       .header,
       .footer {
-        background-color: #83caff;
+        background-color: #ffec83;
       }
 
       .sidebar-left,
       .sidebar-right {
-        background-color: #cb99cc;
-        flex-basis: 40%;
+        background-color: #a3cc99;
       }
 
       .sidebar-right {
-          order: 3;
+        grid-column: 3;
+        grid-row: 1;
+      }
 
+      .sidebar-left {
+        grid-row: 1;
+        grid-column: 1;
       }
 
       .main {
-        background-color: #ffcccc;
-        order: 2;
-      }
+        background-color: #ccefff;
 
-      .layout{
-          display: flex;
-          flex-direction: column;
-          height: 100vh;
+        grid-row: 1;
+        grid-column: 2;
       }
 
       .content{
-          display: flex;
-          flex-direction: row;
-          flex-grow: 1;
+          display: grid;
+          grid-template-rows: 80vh;
+          grid-template-columns: 15vw 70vw 15vw;
       }
 
+      .layout{
+          display: grid;
+          grid-template-rows: 10vh 80vh 10vh;
+      }
     </style>
   </head>
   <body>
     <div class="layout">
       <header class="header">
-        <h1>Header - Flex Box</h1>
+        <h1>Header - Grid</h1>
       </header>
       <section class="content">
         <main class="main">

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #my-container{
+                display: grid;
+                grid-column-gap: 10px;
+                grid-row-gap: 10px;
+                grid-template-columns: 200px;
+
+                justify-content: center;
+            }
+
+            @media only screen and (min-width: 400px)
+            {
+                .img200,
+                .img300 {
+                    align-self: center;
+                }
+
+                .img300 {
+                    grid-row: span 3;
+                }
+
+                .img200 {
+                    grid-row: span 2;
+                }
+            }
+
+            @media only screen and (min-width: 400px) and (max-width: 799px)
+            {
+                #my-container{
+                    grid-template-columns: repeat(2, 200px);
+                }
+            }
+
+            @media only screen and (min-width: 800px)
+            {
+                #my-container{
+                    grid-template-columns: repeat(4, 200px);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="my-container">
+            <script>
+                for(let i = 0; i < 16; i++)
+                {
+                    const imgLen = 100 * (1 + Math.floor(Math.random() * 3));
+                    document.writeln(
+                        `<img class="img${imgLen}" src="https://picsum.photos/200/${imgLen}">`);
+                }
+            </script>
+        </div>
+    </body>
+</html>

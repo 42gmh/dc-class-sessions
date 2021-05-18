@@ -30,7 +30,7 @@ let marioMap = [
     [space_, space_, shirt_, shirt_, pants_, shirt_, shirt_, shirt_, space_, space_, space_, space_], // 8
     [space_, shirt_, shirt_, shirt_, pants_, shirt_, shirt_, pants_, shirt_, shirt_, shirt_, space_], // 9
     [shirt_, shirt_, shirt_, shirt_, pants_, pants_, pants_, pants_, shirt_, shirt_, shirt_, shirt_], // 10
-    [skin__, skin__, shirt_, pants_, yellow, pants_, pants_, yellow, pants_, shirt_, skin__, skin__], // 11
+    [skin__, skin__, shirt_, pants_, button, pants_, pants_, button, pants_, shirt_, skin__, skin__], // 11
     [skin__, skin__, skin__, pants_, pants_, pants_, pants_, pants_, pants_, skin__, skin__, skin__], // 12
     [skin__, skin__, pants_, pants_, pants_, pants_, pants_, pants_, pants_, pants_, skin__, skin__], // 13
     [space_, space_, pants_, pants_, pants_, space_, space_, pants_, pants_, pants_, space_, space_], // 14
@@ -45,10 +45,9 @@ function drawMario()
         document.writeln('<div class="row">');
         for(let j = 0; j < 12; j++)
         {
-            let divLine = '<div class="col-auto my-contents" style="background-color:'
-            divLine+= marioMap[i][j];
-            divLine+=';"></div>';
-            document.writeln(divLine);
+            document.writeln(
+                `<div class="col-auto my-contents" 
+                style="background-color:${marioMap[i][j]};"></div>`);
         }
         document.writeln('</div>');
     }

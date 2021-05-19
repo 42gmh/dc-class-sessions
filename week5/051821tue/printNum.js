@@ -28,7 +28,6 @@ function printNumWhile(first, second)
     
     }
     let counter = first;
-    // let terminate = second;
 
     while(terminateTest(counter))
     {

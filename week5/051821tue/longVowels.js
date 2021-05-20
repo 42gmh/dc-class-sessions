@@ -1,12 +1,12 @@
+let vowels = new Set();
+vowels.add('a');
+vowels.add('e');
+vowels.add('i');
+vowels.add('o');
+vowels.add('u');
+
 function longVowel(theText)
 {
-    let vowels = new Set();
-    vowels.add('a');
-    vowels.add('e');
-    vowels.add('i');
-    vowels.add('o');
-    vowels.add('u');
-
     let resultText = "";
     for(let i = 0; i < theText.length; i++)
     {
@@ -22,4 +22,13 @@ function longVowel(theText)
     return resultText;
 }
 
+function longVowelMap(theText)
+{
+    let expandVowels = aLetter => vowels.has(aLetter.toLowerCase()) ? aLetter.repeat(5) : aLetter;
+    let concatStrs = (accum, curr) => accum += curr;
+
+    return Array.prototype.map.call(theText, expandVowels).reduce(concatStrs);
+}
+
 console.log(longVowel(process.argv[2]));
+console.log(longVowelMap(process.argv[2]));

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>05/25/21 Small Exercises</title>
+    </head>
+    <body>
+        <fieldset>
+            <form id=my-form>
+                <!--
+                    Create a simple HTML form with a single field called 
+                    "Name" and make it required. 
+                -->
+                <p>
+                    <input type="text" name="name-field" required>
+                    <label for="name-field">Name</label>
+                </p>
+
+                <!-- 
+                    Create a simple HTML form with a single field called "Age". 
+                    Restrict the user to only numbers that are from 0-100
+                 -->
+                 <p>
+                    <input type="text" name="age-field" required pattern="[0-9]{1,3}">
+                    <label for="age-field">Age(0-100)</label>
+                 </p>
+
+                 <!-- 
+                     Create a simple HTML form with a single field called "Username". 
+                     This field should a custom error if the name is longer than 15 characters.
+                  -->
+                 <p>
+                    <input type="text" name="username-field" id="username-field" required pattern="^[a-z]{1,15}$">
+                    <label for="username-field">Username (max 15 chars)</label>
+                 </p>
+                <br>
+                <button type="submit" id="btn-submit">Submit</button>
+            </form>
+        </fieldset>
+
+        <script>
+            let usernameInput = document.getElementById("username-field");
+            usernameInput.addEventListener('input', () => {
+                usernameInput.setCustomValidity('');
+                usernameInput.checkValidity();
+            });
+            
+            usernameInput.addEventListener('invalid', () => {
+                usernameInput.setCustomValidity('Usernames contain between 1 and 15 lowercase letters.');
+            });        
+        </script>
+    </body>
+</html>

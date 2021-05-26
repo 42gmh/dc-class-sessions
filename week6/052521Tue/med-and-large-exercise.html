@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>05/25/21 Medium And Large Exercise</title>
+        <style>
+            #my-container{
+                display: flex;
+            }
+
+            input:invalid{
+                background-color: pink;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="my-container">
+            <fieldset>
+                <form id=my-form>
+                    <!-- 
+                        Create a sign up form with the following fields and validations.
+                        name        required, minimum length: 5
+                        password	required, minimum length: 6, maximum length: 15
+                        email	    required, email format
+                        about me	textarea, maximum length: 250
+                        robot check	required, should match a pattern of text
+                    -->
+                    <p>
+                        <input type="text" name="name-field" id="name-field" required pattern="[A-Z][a-z]{4,}">
+                        <label for="name-field">Name</label>
+                    </p>
+                    <p>
+                        <input type="password" name="password-field" id="password-field" required pattern=".{6,15}">
+                        <label for="password-field">Password</label>
+                    </p>
+                    <p>
+                        <input type="email" name="email-field" id="email-field" required>
+                        <label for="email-field">Email</label>
+                    </p>
+                    <p>
+                        <label for="aboutme-field">About Me</label>
+                        <br>
+                        <textarea name="aboutme-field" maxlength="250"></textarea>
+                    </p>
+                    <p>
+                        <input type="text" name="kill-all-robots-field" required pattern="Kill All Robots!">
+                        <label for="kill-all-robots-field">Please Type: Kill All Robots!</label>
+                    </p>
+                    <br>
+                    <button type="submit" id="btn-submit">Submit</button>
+                </form>
+            </fieldset>
+        </div>
+        <script>
+            let nameField = document.getElementById("name-field");
+
+            nameField.addEventListener('input', () => {
+                nameField.setCustomValidity('');
+                nameField.checkValidity();
+            });
+            
+            nameField.addEventListener('invalid', () => {
+                nameField.setCustomValidity('Names must have a mimimum of 5 characters. The first character is upper case. The remainging characters are lower case.');
+            }); 
+
+            let emailField = document.getElementById("email-field");
+            emailField.addEventListener('input', () => {
+                emailField.setCustomValidity('');
+                emailField.checkValidity();
+            });
+            
+            emailField.addEventListener('invalid', () => {
+                emailField.setCustomValidity("It's the 21st century. Do you really need to be told how to enter an email address?");
+            });        
+
+            let passwordField = document.getElementById("password-field");
+            passwordField.addEventListener('input', () => {
+                passwordField.setCustomValidity('');
+                passwordField.checkValidity();
+            });
+            
+            passwordField.addEventListener('invalid', () => {
+                passwordField.setCustomValidity("Passwords require a min of 6 and a max of 15 characters.");
+            });        
+        </script>
+
+    </body>
+</html>

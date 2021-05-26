@@ -1,0 +1,53 @@
+#my-calc{
+    display: grid;
+    grid-template-columns: repeat(4, 60px);
+    grid-template-rows: repeat(6, 60px);
+
+    /* Center the calculator on the screen */
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    background-color: #233e8b;
+}
+
+body{
+    margin: 0px;
+}
+
+#equal,
+#display{
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+#display{
+    background-color: #ffffc7;
+    resize: none;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+#ac{
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+#plus,
+#minus{
+    grid-column-start: 3;
+    grid-column-start: 4;
+}
+button{
+    background-color: #a9f1d4;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+#plus{
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+#minus{
+    grid-row-start: 4;
+    grid-row-end: 6;
+}

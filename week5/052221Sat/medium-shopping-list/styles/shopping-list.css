@@ -1,0 +1,15 @@
+.btn-list-item{
+    background-color: red; 
+    font-weight: bold; 
+    border: none; 
+    margin-right: 10px;
+}
+
+#my-shopping-list{
+    list-style-type: none;
+}
+
+h2{
+    background-color: aquamarine;
+    justify-content: center;
+}

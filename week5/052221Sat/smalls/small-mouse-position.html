@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    </head>
+    <body>
+        <h1 id="mouse-pos"></h1>
+
+        <script>
+            window.addEventListener('click', (e) => { 
+                document.getElementById("mouse-pos").textContent = `Mouse Pos [X:${e.screenX}, Y:${e.screenY}]`; 
+            });
+        </script>
+    </body>
+</html>

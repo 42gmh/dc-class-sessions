@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/madlib.css">
+  <title>MadLib</title>
+</head>
+<body>
+  <!-- HTML goes here -->
+  <h1>MadLib</h1>
+
+  <form id="madLibForm" style="display: block;"> 
+    <p class="form-group" id="my-form">
+      <!-- <label for="animal">Animal</label>
+      <br>
+      <input type="text" name="animal" id="animal"> -->
+    </p>
+    <button type="button" id="btn-submit">Do the MadLib!</button>
+    <button type="button" id="btn-clear">Clear</button>
+    <p id ="errs" style="display: none"></p>
+  </form>
+  
+  <div id="madLibStory" style="display: none">
+    <h2>Nature Show</h2>
+    <p>
+      The majestic <span class="animal"></span> has roamed the forests of 
+      <span class="country"></span> for thousands of years. Today, she wanders
+      in search of <span class="pluralNoun"></span>. She must find food to
+      survive. While hunting for <span class="food"></span>, she found a 
+      <span class="device"></span> hidden behind a <span class="noun"></span>.
+      Suddenly, the device turned on and started to become <span class="adjective"></span>.
+      The king of <span class="country"></span> suddenly appeared, jumped on top
+      of the <span class="adjective"></span> <span class="device"></span> and floated
+      off into the sunset.
+    </p>
+    <p>
+      The End.
+    </p>
+
+    <button type="button" id="btn-restart">Restart!</button>
+  </div>
+
+  <script src="scripts/madlibs.js"></script>
+
+</body>
+</html>
+
+<!-- 
+DONE - Look at the example story in the HTML and open it in the browser
+DONE - Notice that the story is hidden in the browser but the HTML is still in the document
+DONE - Add more inputs for each of the placeholder elements
+DONE - Use an event listener on the form to do the following:
+DONE  - Replace the contents of the placeholders with the inputs from the form
+DONE  - Show the Story
+DONE  - Hide the form
+DONE  - Make sure you replace all the words. The same word may be used twice in the story!
+DONE - Once the story shows, add an event listener to the reset button to do the following:
+DONE  - Hide the Story
+DONE  - Show the Form
+DONE  - Clear out the form inputs
+ -->

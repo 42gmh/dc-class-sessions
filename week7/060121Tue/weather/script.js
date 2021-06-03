@@ -10,7 +10,9 @@ document.getElementById("city-select").addEventListener("change",  (e) => {
 
 function showTheWeather(selectedCity)
 {
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${selectedCity}&APPID=ac60fdc4ef635134517f3129b52dfb4c`).then((response) => 
+    console.log("Please propvide an APP ID and comment me out...");
+    throw ("Please provide an APP ID");
+    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${selectedCity}&APPID=[ENTER APP ID]`).then((response) => 
     {
         response.json().then((data) => {
             console.log(data);

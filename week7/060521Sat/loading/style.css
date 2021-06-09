@@ -1,0 +1,24 @@
+/* *{
+    border: 1px solid black;
+} */
+
+#my-container{
+    display: flex;
+}
+@keyframes smallBounce {
+    from{
+    }
+    to{
+        margin-bottom: 500px;
+    }
+}
+
+.indicator{
+    width: 25px;
+    height: 25px;
+    background-color: aqua;
+    border: 1px solid darkblue;
+    border-radius: 50%;
+    margin: 20px;
+    animation-name: smallBounce;
+}

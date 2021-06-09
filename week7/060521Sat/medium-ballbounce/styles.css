@@ -1,0 +1,23 @@
+ *{
+    border: 1px solid yellow;
+}
+
+@keyframes my-ducky-animation {
+    from{
+    }
+    to{
+        top: 200px;
+    }
+}
+
+img{
+    position: relative;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    animation-name: my-ducky-animation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-out;
+}

@@ -4,21 +4,57 @@
 
 #my-container{
     display: flex;
+    height: 50px;
+    align-content: center;
 }
+
+#outer{
+    display: grid;
+    height: 100vh;
+    align-content: center;
+    justify-content: center;
+    background-color: rgb(155, 155, 240);
+}
+
 @keyframes smallBounce {
     from{
+        background-color: aqua;
     }
     to{
-        margin-bottom: 500px;
+        margin-top: 20px;
+        background-color: rgb(155, 155, 240);
     }
 }
 
 .indicator{
     width: 25px;
     height: 25px;
-    background-color: aqua;
-    border: 1px solid darkblue;
+    margin-left: 10px;
+    margin-right: 10px;
     border-radius: 50%;
-    margin: 20px;
     animation-name: smallBounce;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+#indicator1{
+    animation-delay: 200ms;
+}
+
+#indicator2{
+    animation-delay: 400ms;
+}
+
+#indicator3{
+    animation-delay: 600ms;
+}
+
+#indicator4{
+    animation-delay: 800ms;
+}
+
+#indicator5{
+    animation-delay: 1s;
 }

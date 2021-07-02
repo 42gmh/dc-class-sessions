@@ -1,0 +1,17 @@
+{
+  "name": "cowsay-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cowsay-server.js",
+  "dependencies": {
+    "cowsay": "^1.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./cowsay-server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -5,9 +5,6 @@ const port = 5050;
 
 const cowsay = require('cowsay');
 
-
-console.log();
-
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader("Content-Type", "text/plain");

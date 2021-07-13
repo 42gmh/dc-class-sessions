@@ -7,6 +7,7 @@ const red       = "#ff0000";
 const white     = "#ffffff"; 
 const yellow    = "#ffff00";
 const flesh     = "#ffe9d1";
+const green     = "#00ff00";
 
 const boots_ = brown;
 const button = yellow;

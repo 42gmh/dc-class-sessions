@@ -21,6 +21,9 @@ app.get('/', (req, res) => {
     res.render('draw-mario',{
         locals: {
             marioMap: marioMap
+        },
+        partials: {
+            myBanner : "/partials/et-banner"
         }
     });
 });

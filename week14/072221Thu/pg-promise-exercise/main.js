@@ -1,5 +1,8 @@
-const pgp = require("pg-promise")();
-const db = pgp("postgres://@localhost:5432/072221tododb");
+const myPgPromiseFactory = require("pg-promise");
+console.log(myPgPromiseFactory);
+
+const myPgPromise = myPgPromiseFactory();
+const myDb = myPgPromise("postgres://@localhost:5432/072221tododb");
 
 const http = require('http');
 const express = require('express');
@@ -21,7 +24,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 // GET	/tasks	Reads all of the tasks
 app.get('/', (req, res) => {
-    db.any("SELECT * from TASKS where is_deleted = 'false'").then((tasks) => {
+    myDb.any("SELECT * from TASKS where is_deleted = 'false'").then((tasks) => {
         taskList = tasks;
         console.log(taskList);
 
@@ -37,7 +40,7 @@ app.get('/', (req, res) => {
 app.post('/addtask', (req, res) => {
     console.log(req.body);
 
-    db.none("insert into tasks (title) values ($1);", [req.body.newtask]);
+    myDb.none("insert into tasks (title) values ($1);", [req.body.newtask]);
 
     res.redirect("/");
 });
@@ -46,7 +49,7 @@ app.post('/addtask', (req, res) => {
 app.patch('/tasks/:id/completed', (req, res) => {
     console.log(req.params.id);
 
-    db.none("update tasks set is_completed = 'true' where id = ($1);", [req.params.id]);
+    myDb.none("update tasks set is_completed = 'true' where id = ($1);", [req.params.id]);
 
     res.sendStatus(200);
 });
@@ -54,7 +57,7 @@ app.patch('/tasks/:id/completed', (req, res) => {
 app.patch('/tasks/:id/undo', (req, res) => {
     console.log(req.params.id);
 
-    db.none("update tasks set is_completed = 'false' where id = ($1);", [req.params.id]);
+    myDb.none("update tasks set is_completed = 'false' where id = ($1);", [req.params.id]);
 
     res.sendStatus(200);
 });
@@ -63,7 +66,7 @@ app.patch('/tasks/:id/undo', (req, res) => {
 app.delete('/tasks/:id', (req, res) => {
     console.log(req.params.id);
 
-    db.none("update tasks set is_deleted = 'true' where id = ($1);", [req.params.id]);
+    myDb.none("update tasks set is_deleted = 'true' where id = ($1);", [req.params.id]);
 
     res.sendStatus(200);
 });

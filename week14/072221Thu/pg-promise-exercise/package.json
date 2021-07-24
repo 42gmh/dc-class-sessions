@@ -1,0 +1,24 @@
+{
+  "name": "pg-promise-exercise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "db:create": "createdb 072221tododb",
+    "db:destroy": "dropdb 072221tododb",
+    "db:init": "psql -f schema.sql 072221tododb",
+    "db:seed": "psql -f seed.sql 072221tododb",
+    "db:reset": "npm run db:destroy; npm run db:create && npm run db:init && npm run db:seed",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-es6-template-engine": "^2.2.3",
+    "morgan": "^1.10.0",
+    "pg-promise": "^10.10.2"
+  }
+}

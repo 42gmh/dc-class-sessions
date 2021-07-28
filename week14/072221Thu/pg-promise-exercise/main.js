@@ -38,8 +38,6 @@ app.get('/', (req, res) => {
 
 // POST	/tasks	Creates a new task
 app.post('/addtask', (req, res) => {
-    console.log(req.body);
-
     myDb.none("insert into tasks (title) values ($1);", [req.body.newtask]);
 
     res.redirect("/");

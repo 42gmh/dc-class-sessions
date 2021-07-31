@@ -1,14 +1,14 @@
 'use strict'
 
-const http = require('http');
+// const http = require('http');
 const express = require('express');
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-const server = http.createServer(app);
+// const server = http.createServer(app);
 
 const Sequelize = require('sequelize');
-const { User } = require('./models');
+const { User, Photo } = require('./models');
 
 console.log(User);
 
@@ -19,6 +19,15 @@ app.get('/', (req, res) => {
 
 app.get('/users', async (req, res) => {
     const users = await User.findAll();
+    res.json(users);
+});
+
+app.get('/users/photos', async (req, res) => {
+    const users = await User.findAll({
+        include: [{
+            model: Photo
+        }]
+    });
     res.json(users);
 });
 
@@ -69,8 +78,19 @@ app.post('/users/search', async (req, res) => {
                     firstName: req.body.term,
                     lastName: req.body.term
                 }
-            
+        },
+        include: {
+            model: Photo
         }
+    });
+    res.json(users);
+});
+
+app.get('/photos/users', async (req, res) => {
+    const users = await Photo.findAll({
+        include: [{
+            model: User
+        }]
     });
     res.json(users);
 });
@@ -100,8 +120,8 @@ app.delete('/users/:id', async (req, res) => {
 });
 
 const hostname = '127.0.0.1';
-const port = 3005;
+const port = 443;
 
-server.listen(port, hostname, () => {
+app.listen(port, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
 });

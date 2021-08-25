@@ -1,0 +1,15 @@
+*{
+  text-align: center;
+}
+
+.first_greeting{
+  color : blue;
+}
+
+.more_greeting{
+  color : red;
+}
+
+.more2_greeting{
+  color : green;
+}
